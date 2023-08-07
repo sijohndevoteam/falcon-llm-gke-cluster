@@ -45,3 +45,7 @@ Running open-source models with substantial computational demands like Falcon-7B
 12. Access the Gradio app via the Cloud Run endpoint.
 
 Note: For detailed step-by-step instructions, refer to the original article.
+
+## Port Forwarding
+
+kubectl port-forward svc/truss-falcon-7b-service-cluster-ip 8080
