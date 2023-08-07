@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: truss-falcon-7b-service-ilb
+  annotations:
+    networking.gke.io/load-balancer-type: "Internal"
+    networking.gke.io/internal-load-balancer-allow-global-access: "true"
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy: Cluster
+  selector:
+    component: truss-falcon-7b-layer
+  ports:
+  - name: tcp-port
+    protocol: TCP
+    port: 80
+    targetPort: 8080
