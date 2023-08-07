@@ -49,3 +49,7 @@ Note: For detailed step-by-step instructions, refer to the original article.
 ## Port Forwarding
 
 kubectl port-forward svc/truss-falcon-7b-service-cluster-ip 8080
+
+You should get Output
+ Forwarding from 127.0.0.1:8080 -> 8080
+ Forwarding from [::1]:8080 -> 8080
