@@ -1,0 +1,11 @@
+gcloud auth configure-docker <gcp-region>-docker.pkg.dev
+
+docker tag <locally build model name> <gcp-region>-docker.pkg.dev/<gcp-project-id>/<artifact-repo-name>/falcon-7b-model:latest
+
+docker push <gcp-region>-docker.pkg.dev/<project-id>/<artifact-repo-name>/falcon-7b-model:latest
+
+Eg:
+docker images #To find the locally build image name
+gcloud auth configure-docker europe-north1-docker.pkg.dev
+docker tag custom-model europe-north1-docker.pkg.dev/sijohn-playground-v2/sm-docker-repo/falcon-7b-model:latest
+docker push europe-north1-docker.pkg.dev/sijohn-playground-v2/sm-docker-repo/falcon-7b-model:latest
